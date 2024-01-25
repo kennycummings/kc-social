@@ -1,0 +1,32 @@
+{
+    "name": "social-network-api",
+    "version": "1.0.0",
+    "description": "API for a social network web application",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "mongoose": "^6.12.6"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "your-git-repository-url"
+    },
+    "keywords": [
+        "social network",
+        "API",
+        "Express",
+        "MongoDB"
+    ],
+    "author": "Kenny Cummings",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kennycummings/kc-social"
+    },
+    "homepage": "https://github.com/kennycummings/kc-social"
+}
