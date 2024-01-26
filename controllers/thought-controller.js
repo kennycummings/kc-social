@@ -1,16 +1,10 @@
 const { User, Thought } = require('../models');
 
 const thoughtController = {
-    // Get all thoughts
     getAllThoughts(req, res) {
         Thought.find({})
-            .select('-__v')
-            .sort({ createdAt: -1 })
-            .then((dbThoughtData) => res.json(dbThoughtData))
-            .catch((err) => {
-                console.error(err);
-                res.status(500).json(err);
-            });
+            .then((thoughts) => res.json(thoughts))
+            .catch((err) => res.status(500).json(err));
     },
 
     // Get a single thought by its _id
@@ -93,4 +87,7 @@ const thoughtController = {
                 res.json(dbThoughtData);
             })
             .catch((err) => res.status(500).json(err));
-    }}
+    },
+};
+
+module.exports = thoughtController;
