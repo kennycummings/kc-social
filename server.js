@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const routes = require('./routes');
+const thoughtRoutes = require('./routes/thought-routes');
+const userRoutes = require('./routes/user-routes');
+const connection = require('./config/connection.js');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -9,17 +11,9 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-api', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-});
-
 // Routes
-app.use('/api/users', routes.userRoutes);
-app.use('/api/thoughts', routes.thoughtRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/thoughts', thoughtRoutes);
 
 // Default route for invalid endpoints
 app.use((req, res) => {
