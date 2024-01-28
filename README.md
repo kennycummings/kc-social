@@ -21,9 +21,7 @@ The development and improvement of this API were made possible with the contribu
 
 ## Walkthrough Video
 
-
-
-Feel free to explore the video links for an in-depth walkthrough of the application's setup and various routes.
+Feel free to explore the video link for an in-depth walkthrough of the application's setup and various routes: https://www.loom.com/share/c90c40d6848d4285b17218e66c58a3da
 
 ## License
 
